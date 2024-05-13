@@ -8,12 +8,15 @@ Recruitment customisation
 """,
     'author': 'Mayuri Bharadva',
     'version': '16.0.0.1.0',
-    'depends': ['hr_recruitment', 'website_hr_recruitment'],
+    'depends': ['hr_recruitment', 'website', 'website_hr_recruitment'],
     "data": [
         'security/ir.model.access.csv',
         'views/job_spec.xml',
         'views/hr_applicant_view.xml',
-        'views/website_recruitment_templates.xml'
+        'views/hr_applicant_resume.xml',
+        'views/website_recruitment_templates.xml',
+        'wizards/import_resume.xml',
+        'report/resume_report.xml'
     ],
     'external_dependencies': {
         'python': ['rsaidnumber'],
@@ -22,6 +25,7 @@ Recruitment customisation
     'assets': {
             'web.assets_frontend': [
                 'job_spec/static/src/js/job_application_portal.js',
+                'job_spec/static/src/scss/**/*',
             ],
     },
     'license': 'LGPL-3',

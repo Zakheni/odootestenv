@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_hr_applicant_resume_tree" model="ir.ui.view">
+            <field name="name">hr.applicant.resume.tree</field>
+            <field name="model">hr.applicant.resume</field>
+            <field name="arch" type="xml">
+                <tree string="Resumes">
+                    <field name="surname"/>
+                    <field name="first_name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_hr_applicant_resume_form">
+            <field name="name">hr.applicant.resume.form</field>
+            <field name="model">hr.applicant.resume</field>
+            <field name="arch" type="xml">
+                <form string="Applicant Resume">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="surname"/>
+                                <field name="first_name"/>
+                            </group>
+                            <group>
+                                <field name="id_passport"/>
+                                <field name="languages"/>
+                            </group>
+                        </group>
+                        <group name="qualifications" string="Qualifications">
+                            <field name="qualification_ids">
+                                <tree editable="bottom" create="false" delete="false">
+                                    <field name="qualification"/>
+                                    <field name="institute"/>
+                                    <field name="year"/>
+                                </tree>
+                            </field>
+                        </group>
+                        <group name="skill_summary" string="Skills Summary">
+                            <field name="skills_summary">
+                            </field>
+                        </group>
+                        <group name="additional_comments" string="Additional Comments">
+                            <field name="additional_comments">
+                            </field>
+                        </group>
+                        <group name="courses" string="Courses">
+                            <field name="course_ids">
+                                <tree editable="bottom" create="false" delete="false">
+                                    <field name="course"/>
+                                    <field name="course_institute"/>
+                                </tree>
+                            </field>
+                        </group>
+                        <group name="employment_history" string="Employment History">
+                            <field name="employment_history_ids">
+                                <tree editable="bottom" create="false" delete="false">
+                                    <field name="emp_company_name"/>
+                                    <field name="emp_date_employed"/>
+                                    <field name="emp_position"/>
+                                    <field name="emp_duties"/>
+                                </tree>
+                            </field>
+                        </group>
+                        <group name="skills" string="Skills">
+                            <field name="skill_ids">
+                                <tree editable="bottom" create="false" delete="false">
+                                    <field name="skill"/>
+                                    <field name="skill_experience"/>
+                                    <field name="skill_level"/>
+                                </tree>
+                            </field>
+                        </group>
+
+                        <group name="references" string="References">
+                            <field name="reference_ids">
+                                <tree editable="bottom" create="false" delete="false">
+                                    <field name="ref_company"/>
+                                    <field name="ref_person"/>
+                                    <field name="ref_person_contact_details"/>
+                                </tree>
+                            </field>
+                        </group>
+<!--                        <notebook>-->
+<!--                            <page string="Qualifications" name="qualifications">-->
+<!--                            </page>-->
+<!--                        </notebook>-->
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_hr_applicant_resume_form">
+            <field name="name">Applicant Resumes</field>
+            <field name="res_model">hr.applicant.resume</field>
+            <field name="view_mode">tree,form</field>
+<!--            <field name="view_id" ref="view_hr_applicant_resume_form"/>-->
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first applicant resume</p>
+            </field>
+        </record>
+
+        <menuitem id="menu_hr_applicant_resume_form" name="Resumes" parent="job_spec.menu_parent_job_spec" action="action_hr_applicant_resume_form"/>
+    </data>
+</odoo>

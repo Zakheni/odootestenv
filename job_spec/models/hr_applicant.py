@@ -62,6 +62,7 @@ class Applicant(models.Model):
     did_you_clarify_counter_offer_with_the_candidate = fields.Selection([('N','No'),('Y','Yes')])
     did_the_candidate_accept_the_offer = fields.Selection([('N','No'),('Y','Yes')])
     resume_copy = fields.Binary(string="Resume")
+    is_create_resume_from_web = fields.Boolean()
 
     def create_resume(self):
         for record in self:
