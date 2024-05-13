@@ -3,6 +3,45 @@
     <template id="job_application_form_inherit" name="Job Application Form"
               inherit_id="website_hr_recruitment.apply">
         <xpath expr="//div[hasclass('s_website_form_rows')]/div[4]" position="after">
+            <div class="col-12 mb-0 py-2 s_website_form_field" data-type="char" data-name="Field">
+                <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="citizenship">
+                        <span class="s_website_form_label_content">Nationality</span>
+                    </label>
+                    <div class="col-sm">
+                        <select id="citizenship" class="form-control s_website_form_input" name="citizenship" required="true">
+                            <option value="SA">South African</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div id="id_number_field" style="display: none;">
+                <div class="col-12 mb-0 py-2 s_website_form_field" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="id_number">
+                            <span class="s_website_form_label_content">ID Number (SA)</span>
+                        </label>
+                        <div class="col-sm">
+                            <input type="text" id="id_number" class="form-control s_website_form_input" name="id_no" maxlength="13" required="true"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="passport_field">
+                <div class="col-12 mb-0 py-2 s_website_form_field" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="passport">
+                            <span class="s_website_form_label_content">Passport (Non-SA)</span>
+                        </label>
+                        <div class="col-sm">
+                            <input type="text" id="passport" class="form-control s_website_form_input" name="passport"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="col-12 mb-0 py-2 s_website_form_field"
                 data-type="number" data-name="Field">
                 <div class="row s_col_no_resize s_col_no_bgcolor">
@@ -75,45 +114,9 @@
                 </div>
             </div>
 
-            <div class="col-12 mb-0 py-2 s_website_form_field" data-type="char" data-name="Field">
-                <div class="row s_col_no_resize s_col_no_bgcolor">
-                    <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="citizenship">
-                        <span class="s_website_form_label_content">Nationality</span>
-                    </label>
-                    <div class="col-sm">
-                        <select id="citizenship" class="form-control s_website_form_input" name="citizenship" required="true">
-                            <option value="SA">South African</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
 
-            <div id="id_number_field" style="display: none;">
-                <div class="col-12 mb-0 py-2 s_website_form_field" data-type="char" data-name="Field">
-                    <div class="row s_col_no_resize s_col_no_bgcolor">
-                        <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="id_number">
-                            <span class="s_website_form_label_content">ID Number (SA)</span>
-                        </label>
-                        <div class="col-sm">
-                            <input type="text" id="id_number" class="form-control s_website_form_input" name="id_no" maxlength="13" required="true"/>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div id="passport_field">
-                <div class="col-12 mb-0 py-2 s_website_form_field" data-type="char" data-name="Field">
-                    <div class="row s_col_no_resize s_col_no_bgcolor">
-                        <label class="col-4 col-sm-auto s_website_form_label" style="width: 200px" for="passport">
-                            <span class="s_website_form_label_content">Passport (Non-SA)</span>
-                        </label>
-                        <div class="col-sm">
-                            <input type="text" id="passport" class="form-control s_website_form_input" name="passport"/>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
 
             <div class="col-12 mb-0 py-2 s_website_form_field" data-type="char" data-name="Field">
                 <div class="row s_col_no_resize s_col_no_bgcolor">
