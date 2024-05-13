@@ -23,7 +23,7 @@
                             <span class="s_website_form_label_content">ID Number (SA)*</span>
                         </label>
                         <div class="col-sm">
-                            <input type="text" id="id_number" class="form-control s_website_form_input" name="id_no" maxlength="13" required="true"/>
+                            <input type="text" id="id_number" class="form-control s_website_form_input" name="id_no" maxlength="13"/>
                         </div>
                     </div>
                 </div>
