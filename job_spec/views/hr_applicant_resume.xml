@@ -28,15 +28,6 @@
                                 <field name="languages"/>
                             </group>
                         </group>
-                        <group name="qualifications" string="Qualifications">
-                            <field name="qualification_ids">
-                                <tree editable="bottom" create="false" delete="false">
-                                    <field name="qualification"/>
-                                    <field name="institute"/>
-                                    <field name="year"/>
-                                </tree>
-                            </field>
-                        </group>
                         <group name="skill_summary" string="Skills Summary">
                             <field name="skills_summary">
                             </field>
@@ -45,47 +36,64 @@
                             <field name="additional_comments">
                             </field>
                         </group>
-                        <group name="courses" string="Courses">
-                            <field name="course_ids">
-                                <tree editable="bottom" create="false" delete="false">
-                                    <field name="course"/>
-                                    <field name="course_institute"/>
-                                </tree>
-                            </field>
-                        </group>
-                        <group name="employment_history" string="Employment History">
-                            <field name="employment_history_ids">
-                                <tree editable="bottom" create="false" delete="false">
-                                    <field name="emp_company_name"/>
-                                    <field name="emp_date_employed"/>
-                                    <field name="emp_position"/>
-                                    <field name="emp_duties"/>
-                                </tree>
-                            </field>
-                        </group>
-                        <group name="skills" string="Skills">
-                            <field name="skill_ids">
-                                <tree editable="bottom" create="false" delete="false">
-                                    <field name="skill"/>
-                                    <field name="skill_experience"/>
-                                    <field name="skill_level"/>
-                                </tree>
-                            </field>
-                        </group>
+                        <notebook>
+                            <page string="Qualifications" name="qualifications">
+                                <group name="qualifications" string="Qualifications">
+                                    <field name="qualification_ids">
+                                        <tree editable="bottom">
+                                            <field name="qualification"/>
+                                            <field name="institute"/>
+                                            <field name="year"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                            <page string="Courses" name="courses">
+                                <group name="courses" string="Courses">
+                                    <field name="course_ids">
+                                        <tree editable="bottom">
+                                            <field name="course"/>
+                                            <field name="course_institute"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                            <page string="Employment History" name="employment_history">
+                                <group name="employment_history" string="Employment History">
+                                    <field name="employment_history_ids">
+                                        <tree editable="bottom">
+                                            <field name="emp_company_name"/>
+                                            <field name="emp_date_employed"/>
+                                            <field name="emp_position"/>
+                                            <field name="emp_duties"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                            <page string="Skills">
+                                <group name="skills" string="Skills">
+                                    <field name="skill_ids">
+                                        <tree editable="bottom">
+                                            <field name="skill"/>
+                                            <field name="skill_experience"/>
+                                            <field name="skill_level"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                            <page string="References">
+                                <group name="references" string="References">
+                                    <field name="reference_ids">
+                                        <tree editable="bottom">
+                                            <field name="ref_company"/>
+                                            <field name="ref_person"/>
+                                            <field name="ref_person_contact_details"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
 
-                        <group name="references" string="References">
-                            <field name="reference_ids">
-                                <tree editable="bottom" create="false" delete="false">
-                                    <field name="ref_company"/>
-                                    <field name="ref_person"/>
-                                    <field name="ref_person_contact_details"/>
-                                </tree>
-                            </field>
-                        </group>
-<!--                        <notebook>-->
-<!--                            <page string="Qualifications" name="qualifications">-->
-<!--                            </page>-->
-<!--                        </notebook>-->
                     </sheet>
                 </form>
             </field>
