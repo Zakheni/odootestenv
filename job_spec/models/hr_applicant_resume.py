@@ -4,6 +4,7 @@ from odoo import models, fields, api, _
 
 class HRApplicantResume(models.Model):
     _name = 'hr.applicant.resume'
+    _rec_name = 'first_name'
     _description = 'Zakheni Resume'
 
     applicant_id = fields.Many2one("hr.applicant")
