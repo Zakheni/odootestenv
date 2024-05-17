@@ -97,7 +97,7 @@ publicWidget.registry.JobCreateResume = publicWidget.Widget.extend({
 
     start: function () {
         var def = this._super.apply(this, arguments);
-        this.row = 1;
+        this.row = $('#qualTableBody tr').length;
         this.course_row = 1;
         this.skill_row = 1;
         this.ref_row = 1;

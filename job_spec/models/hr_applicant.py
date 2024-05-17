@@ -64,6 +64,10 @@ class Applicant(models.Model):
     resume_copy = fields.Binary(string="Resume")
     is_create_resume_from_web = fields.Boolean()
 
+    f2f_interview_date = fields.Date()
+    f2f_interview_time = fields.Char()
+    f2f_interview_place = fields.Char()
+
     def create_resume(self):
         for record in self:
             if record.resume_copy:

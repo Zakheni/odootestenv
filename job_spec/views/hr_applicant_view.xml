@@ -38,65 +38,71 @@
                     <field name="type_id"/>
                     <field name="resume_copy"/>
                 </xpath>
-
-                <xpath expr="//notebook" position="inside">
-                    <page string="Candidate Screening">
-                        <group>
-                            <field name="tell_me_about_your_self"/>
-                            <field name="when_can_you_start"/>
-                            <field name="why_are_you_in_the_job_market_at_the_moment"/>
-                            <field name="how_do_you_feel_about_counter_offer"/>
-                            <field name="what_are_your_proudest_professional_achievements"/>
-                            <field name="are_you_interviewing_with_other_companies"/>
-                            <field name="when_would_you_be_available_to_start_a_new_role"/>
-                            
-                        </group>
-                    </page>
+                <xpath expr="//form/sheet/group" position="inside">
+                    <group string="Appointment for face-to-face interview">
+                        <field name="f2f_interview_date" string="Date"/>
+                        <field name="f2f_interview_time" string="Time"/>
+                        <field name="f2f_interview_place" string="Place"/>
+                    </group>
                 </xpath>
-                <xpath expr="//notebook" position="inside">
-                    <page string="Reference Check 1">
-                        <group>
-                            <field name="reference_Name_and_surname_1"/>
-                            <field name="company_name_1"/>
-                            <field name="contact_number_1"/>
-                        </group>
-                    </page>
-                </xpath>
-                <xpath expr="//notebook" position="inside">
-                    <page string="Reference Check 2">
-                        <group>
-                            <field name="reference_Name_and_surname_2"/>
-                            <field name="company_name_2"/>
-                            <field name="contact_number_2"/>
-                        </group>
-                    </page>
-                </xpath>
-                <xpath expr="//notebook" position="inside">
-                    <page string="Reference Check 3">
-                        <group>
-                            <field name="reference_Name_and_surname_3"/>
-                            <field name="company_name_3"/>
-                            <field name="contact_number_3"/>
-                        </group>
-                    </page>
-                </xpath>
-                <xpath expr="//notebook" position="inside">
-                    <page string="Client Interview">
-                        <group>
-                            <field name="how_do_you_think_the_interview_went"/>
-                            <field name="what_type_of_questions_did_the_hiring_manager_ask_you"/>
-                            <field name="what_questions_did_you_ask_at_the_end"/>
-                        </group>
-                    </page>
-                </xpath>
-                <xpath expr="//notebook" position="inside">
-                    <page string="Offer Stage">
-                        <group>
-                            <field name="did_you_clarify_counter_offer_with_the_candidate"/>
-                            <field name="did_the_candidate_accept_the_offer"/>
-                        </group>
-                    </page>
-                </xpath>
+<!--                <xpath expr="//notebook" position="inside">-->
+<!--                    <page string="Candidate Screening">-->
+<!--                        <group>-->
+<!--                            <field name="tell_me_about_your_self"/>-->
+<!--                            <field name="when_can_you_start"/>-->
+<!--                            <field name="why_are_you_in_the_job_market_at_the_moment"/>-->
+<!--                            <field name="how_do_you_feel_about_counter_offer"/>-->
+<!--                            <field name="what_are_your_proudest_professional_achievements"/>-->
+<!--                            <field name="are_you_interviewing_with_other_companies"/>-->
+<!--                            <field name="when_would_you_be_available_to_start_a_new_role"/>-->
+<!--                            -->
+<!--                        </group>-->
+<!--                    </page>-->
+<!--                </xpath>-->
+<!--                <xpath expr="//notebook" position="inside">-->
+<!--                    <page string="Reference Check 1">-->
+<!--                        <group>-->
+<!--                            <field name="reference_Name_and_surname_1"/>-->
+<!--                            <field name="company_name_1"/>-->
+<!--                            <field name="contact_number_1"/>-->
+<!--                        </group>-->
+<!--                    </page>-->
+<!--                </xpath>-->
+<!--                <xpath expr="//notebook" position="inside">-->
+<!--                    <page string="Reference Check 2">-->
+<!--                        <group>-->
+<!--                            <field name="reference_Name_and_surname_2"/>-->
+<!--                            <field name="company_name_2"/>-->
+<!--                            <field name="contact_number_2"/>-->
+<!--                        </group>-->
+<!--                    </page>-->
+<!--                </xpath>-->
+<!--                <xpath expr="//notebook" position="inside">-->
+<!--                    <page string="Reference Check 3">-->
+<!--                        <group>-->
+<!--                            <field name="reference_Name_and_surname_3"/>-->
+<!--                            <field name="company_name_3"/>-->
+<!--                            <field name="contact_number_3"/>-->
+<!--                        </group>-->
+<!--                    </page>-->
+<!--                </xpath>-->
+<!--                <xpath expr="//notebook" position="inside">-->
+<!--                    <page string="Client Interview">-->
+<!--                        <group>-->
+<!--                            <field name="how_do_you_think_the_interview_went"/>-->
+<!--                            <field name="what_type_of_questions_did_the_hiring_manager_ask_you"/>-->
+<!--                            <field name="what_questions_did_you_ask_at_the_end"/>-->
+<!--                        </group>-->
+<!--                    </page>-->
+<!--                </xpath>-->
+<!--                <xpath expr="//notebook" position="inside">-->
+<!--                    <page string="Offer Stage">-->
+<!--                        <group>-->
+<!--                            <field name="did_you_clarify_counter_offer_with_the_candidate"/>-->
+<!--                            <field name="did_the_candidate_accept_the_offer"/>-->
+<!--                        </group>-->
+<!--                    </page>-->
+<!--                </xpath>-->
 
             </field>
         </record>
