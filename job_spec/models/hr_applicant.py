@@ -233,7 +233,7 @@ class Applicant(models.Model):
     @api.depends('stage_id')
     def _compute_stage_id(self):
         for applicant in self:
-            if applicant.stage_id == self.env.ref('job_spec.candidate_screen_stage_job'):
+            if applicant.stage_id == self.env.ref('job_spec.candidate_screening_stage_job'):
                 applicant.candidate_screening_stage = True
             else:
                 applicant.candidate_screening_stage = False
