@@ -233,7 +233,7 @@ class Applicant(models.Model):
     @api.depends('stage_id')
     def _compute_stage_id(self):
         for applicant in self:
-            if applicant.stage_id == self.env.ref('job_spec.candidate_screening_stage_job'):
+            if applicant.stage_id == self.env.ref('job_spec.candidate_screen_stage_job'):
                 applicant.candidate_screening_stage = True
             else:
                 applicant.candidate_screening_stage = False
@@ -374,3 +374,15 @@ class Applicant(models.Model):
                 self.did_the_candidate_accept_the_offer = hr_applicant.did_the_candidate_accept_the_offer
 
                 #             })
+
+
+
+class RecruitmentStages(models.Model):
+    _inherit='hr.recruitment.stage'
+
+    def update_recruitment_stages(self):
+        test_job = self.env['hr.job'].search([('name', '=', 'Test')])
+        if not test_job:
+            test_job = self.env['hr.job'].create({'name': 'Test'})
+        for rec in self:
+            rec['job_ids'] = test_job.ids
