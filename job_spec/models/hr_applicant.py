@@ -32,26 +32,160 @@ class Applicant(models.Model):
     how_many_years_of_experience = fields.Char(string="How many years of experience")
     notice_period = fields.Text(string="Notice period")
     location = fields.Text(string="Location")
+
     tell_me_about_your_self = fields.Text(string="1. Tell me about yourself")
     when_can_you_start = fields.Text(string="2. When can you start")
-    why_are_you_in_the_job_market_at_the_moment = fields.Text(string="3. Why are you in the job market at the moment")
-    how_do_you_feel_about_counter_offer = fields.Text(string="4. How do you feel about counter offer")
-    what_are_your_proudest_professional_achievements = fields.Text(string="5. What are your proudest professional achievements")
+    what_are_your_salary_expectations = fields.Text(string="3. After you have went through the job spec for this role, what are your salary expectations?")
+    why_are_you_in_the_job_market_at_the_moment = fields.Text(string="4. Why are you in the job market at the moment")
+    how_do_you_feel_about_counter_offer = fields.Text(string="5. How do you feel about counter offer")
+    what_are_possibilities_of_counter_offer = fields.Text(string="6. If my client offers you this job,"
+                                                             "what are the possibility of your current company to counter offer?")
+    what_are_your_proudest_professional_achievements = fields.Text(string="7. What are your proudest professional achievements?")
+    what_is_your_idea_work_environment = fields.Text(string="8. What's your ideal work environment?")
     #zakinfo developmemt team
-    are_you_interviewing_with_other_companies = fields.Text(string="6. Are you interviewing with other companies") 
-    when_would_you_be_available_to_start_a_new_role = fields.Text(string="7. When would you be available to start a new role")
-    #zakinfo development team - refference check tab1
-    reference_Name_and_surname_1 = fields.Text(string="1. Reference Name and surname")
-    company_name_1 = fields.Text(string="2. Company Name")
-    contact_number_1 = fields.Char(string="3. Contact Number")
-    #zakinfo development team - refference check tab2
-    reference_Name_and_surname_2 = fields.Text(string="1. Reference Name and surname")
-    company_name_2 = fields.Text(string="2. Company Name")
-    contact_number_2 = fields.Char(string="3. Contact Number")
-    #zakinfo development team - refference check tab3
-    reference_Name_and_surname_3 = fields.Text(string="1. Reference Name and surname")
-    company_name_3 = fields.Text(string="2. Company Name")
-    contact_number_3 = fields.Char(string="3. Contact Number")
+    are_you_interviewing_with_other_companies = fields.Text(string="9. Are you interviewing with other companies")
+    when_would_you_be_available_to_start_a_new_role = fields.Text(string="10. When would you be available to start a new role")
+
+    # Experience and backgrund tab
+    knowledge_areas = fields.Char(string='In what areas are you most knowledgeable?')
+    strengths = fields.Char(string='What are your strengths?')
+    best_work_environment = fields.Char(string='What kind of environment do you need to do your best work?')
+    how_do_you_work_under_pressure = fields.Char(string='How do you work under pressure?')
+    leadership_style = fields.Char(string='What\'s your leadership style?')
+    leadership_example = fields.Char(string='Tell me about when you used leadership skills to get a job done.')
+    typical_day = fields.Char(string='Describe a typical day at your current job.')
+    career_accomplishments = fields.Char(
+        string='Tell me about one of your most significant career accomplishments so far.')
+    conflict_handling_with_colleague = fields.Char(
+        string='Was there a time you didn\'t work well with a manager or colleague? If so, can you tell me how you handled the situation?')
+    sample_work = fields.Char(string='Can you provide us with a sample of your work?')
+    motivation = fields.Char(string='What motivates you?')
+    next_job_expectations = fields.Char(string='What are you looking for in your next job?')
+    other_expectations_with_new_job = fields.Char(string='Others you looking for in your next job?')
+    others = fields.Char(string='Others')
+
+    # Reference Check 1
+    ref_1_reference_check_for = fields.Char(string='Reference check for')
+    ref_1_referee_name = fields.Char(string='Referee Name and Surname')
+    ref_1_company = fields.Char(string='Company')
+    ref_1_contact_number = fields.Char(string='Contact number')
+    ref_1_company_worked_with = fields.Char(string='You worked with him/her at which company?')
+    ref_1_position_held = fields.Char(string='What was his/her position?')
+    ref_1_duration_worked = fields.Char(string='How long did he/she work for you?')
+    ref_1_placement_position = fields.Char(string='Am placing him/her for this position')
+    ref_1_skills_for_role = fields.Char(string='What skills does he/she have to perform well in this role?')
+    ref_1_greatest_strengths = fields.Char(string='What are his/her greatest strengths?')
+    ref_1_area_of_development = fields.Char(string='What is his/her area of development?')
+    ref_1_communication_skill = fields.Char(string='How was his/her communication skill?')
+    ref_1_work_preference = fields.Selection([
+        ('alone', 'Alone'),
+        ('team', 'With a team')
+    ], string='Does he/she work better alone or with a team?')
+    ref_1_relationship_with_coworkers = fields.Char(
+        string='How was his relationship with his coworkers and Management?')
+    ref_1_biggest_accomplishment = fields.Char(
+        string='What was one of his/her biggest accomplishments while you worked together?')
+    ref_1_rating = fields.Integer(
+        string='On a scale of 1 to 10, compared to other people you’ve hired, how would you rate him/her?')
+    ref_1_reason_for_leaving = fields.Char(string='Why did he/she leave your company?')
+    ref_1_rehire = fields.Selection([
+        ('yes', 'Yes'),
+        ('no', 'No')
+    ], string='Would you rehire him/her?')
+    ref_1_additional_comments = fields.Text(string='Is there any comment you would like to add?')
+
+    # Reference Check 2
+    ref_2_reference_check_for = fields.Char(string='Reference check for')
+    ref_2_referee_name = fields.Char(string='Referee Name and Surname')
+    ref_2_company = fields.Char(string='Company')
+    ref_2_contact_number = fields.Char(string='Contact number')
+    ref_2_company_worked_with = fields.Char(string='You worked with him/her at which company?')
+    ref_2_position_held = fields.Char(string='What was his/her position?')
+    ref_2_duration_worked = fields.Char(string='How long did he/she work for you?')
+    ref_2_placement_position = fields.Char(string='Am placing him/her for this position')
+    ref_2_skills_for_role = fields.Char(string='What skills does he/she have to perform well in this role?')
+    ref_2_greatest_strengths = fields.Char(string='What are his/her greatest strengths?')
+    ref_2_area_of_development = fields.Char(string='What is his/her area of development?')
+    ref_2_communication_skill = fields.Char(string='How was his/her communication skill?')
+    ref_2_work_preference = fields.Selection([
+        ('alone', 'Alone'),
+        ('team', 'With a team')
+    ], string='Does he/she work better alone or with a team?')
+    ref_2_relationship_with_coworkers = fields.Char(
+        string='How was his relationship with his coworkers and Management?')
+    ref_2_biggest_accomplishment = fields.Char(
+        string='What was one of his/her biggest accomplishments while you worked together?')
+    ref_2_rating = fields.Integer(
+        string='On a scale of 1 to 10, compared to other people you’ve hired, how would you rate him/her?')
+    ref_2_reason_for_leaving = fields.Char(string='Why did he/she leave your company?')
+    ref_2_rehire = fields.Selection([
+        ('yes', 'Yes'),
+        ('no', 'No')
+    ], string='Would you rehire him/her?')
+    ref_2_additional_comments = fields.Text(string='Is there any comment you would like to add?')
+
+    # Reference Check 3
+    ref_3_reference_check_for = fields.Char(string='Reference check for')
+    ref_3_referee_name = fields.Char(string='Referee Name and Surname')
+    ref_3_company = fields.Char(string='Company')
+    ref_3_contact_number = fields.Char(string='Contact number')
+    ref_3_company_worked_with = fields.Char(string='You worked with him/her at which company?')
+    ref_3_position_held = fields.Char(string='What was his/her position?')
+    ref_3_duration_worked = fields.Char(string='How long did he/she work for you?')
+    ref_3_placement_position = fields.Char(string='Am placing him/her for this position')
+    ref_3_skills_for_role = fields.Char(string='What skills does he/she have to perform well in this role?')
+    ref_3_greatest_strengths = fields.Char(string='What are his/her greatest strengths?')
+    ref_3_area_of_development = fields.Char(string='What is his/her area of development?')
+    ref_3_communication_skill = fields.Char(string='How was his/her communication skill?')
+    ref_3_work_preference = fields.Selection([
+        ('alone', 'Alone'),
+        ('team', 'With a team')
+    ], string='Does he/she work better alone or with a team?')
+    ref_3_relationship_with_coworkers = fields.Char(
+        string='How was his relationship with his coworkers and Management?')
+    ref_3_biggest_accomplishment = fields.Char(
+        string='What was one of his/her biggest accomplishments while you worked together?')
+    ref_3_rating = fields.Integer(
+        string='On a scale of 1 to 10, compared to other people you’ve hired, how would you rate him/her?')
+    ref_3_reason_for_leaving = fields.Char(string='Why did he/she leave your company?')
+    ref_3_rehire = fields.Selection([
+        ('yes', 'Yes'),
+        ('no', 'No')
+    ], string='Would you rehire him/her?')
+    ref_3_additional_comments = fields.Text(string='Is there any comment you would like to add?')
+
+    candidate = fields.Char(string='Candidate')
+    debrief_time = fields.Char(string='Debrief Time')
+    debrief_date = fields.Date(string='Debrief Date')
+    is_calendar_booked = fields.Boolean(string='Is the calendar booked for this meeting?')
+
+    # Candidate Questions
+    candidate_interview_experience = fields.Text(string='1. How do you think the interview went?')
+    candidate_feelings_about_role = fields.Text(
+        string='2. What are your feelings regarding the organization & the role now?')
+    candidate_questions_asked = fields.Text(string='3. What type of questions did the hiring manager ask you?')
+    candidate_own_questions = fields.Text(string='4. What questions did you ask at the end?')
+
+    # Client Questions
+    client_interview_experience = fields.Text(string='1. How did the interview go?')
+    client_candidate_ability = fields.Text(string='2. Do you feel the candidate is able to handle the position?')
+    client_candidate_strengths_weaknesses = fields.Text(
+        string='3. What do you feel are the candidate’s strengths/weaknesses?')
+    is_client_more_details_needed = fields.Selection([('yes', 'Yes'), ('no', 'No')],
+                                                 string='4. Are there any areas of their background where you would like more detail?')
+    client_information_needed = fields.Text(string='5. If yes, what information would you like?')
+    client_next_steps = fields.Text(string='6. How would you like to proceed from here?')
+    client_offering_interview = fields.Text(
+        string='7. Will the next meeting be an offering interview? If not, at what stage would you be making an offer?')
+
+    salary_benefit_offer_in_line = fields.Selection([('yes', 'Yes'), ('no', 'No')],
+                                                    string='Is the salary and benefit offer in line with the candidate expectation?')
+    clarified_counter_offer = fields.Selection([('yes', 'Yes'), ('no', 'No')],
+                                               string='Did you clarify counter offer with the candidate?')
+    did_candidate_accepted_offer = fields.Selection([('yes', 'Yes'), ('no', 'No')],
+                                                string='Did the candidate accept the offer?')
+    # if_accepted_inactive_candidate = fields.Boolean(string='If yes, place the candidate on inactive and close the role')
+
     #zakinfo development team - client interview 
     how_do_you_think_the_interview_went = fields.Text(string="1. How do you think the interview went")
     #what_are_your_feelings_regarding_the_organization_and_the_role_now = fields.Text(string="2. What are your feelings regarding the organization & the role now")
@@ -64,9 +198,74 @@ class Applicant(models.Model):
     resume_copy = fields.Binary(string="Resume")
     is_create_resume_from_web = fields.Boolean()
 
+    candidate_screening_stage = fields.Boolean(
+        compute='_compute_stage_id', store=True,
+    )
+    consultant_interview_stage = fields.Boolean(
+        compute='_compute_stage_id', store=True,
+    )
+    reference_check_1_stage = fields.Boolean(
+        compute='_compute_stage_id', store=True,
+    )
+    reference_check_2_stage = fields.Boolean(
+        compute='_compute_stage_id', store=True,
+    )
+    reference_check_3_stage = fields.Boolean(
+        compute='_compute_stage_id', store=True,
+    )
+    cv_submitted_stage = fields.Boolean(
+        compute='_compute_stage_id', store=True,
+    )
+    first_client_interview_stage = fields.Boolean(
+        compute='_compute_stage_id', store=True,
+    )
+    second_client_interview_stage = fields.Boolean(
+        compute='_compute_stage_id', store=True,
+    )
+    offer_stage = fields.Boolean(
+        compute='_compute_stage_id', store=True,
+    )
+
     f2f_interview_date = fields.Date()
     f2f_interview_time = fields.Char()
     f2f_interview_place = fields.Char()
+
+    @api.depends('stage_id')
+    def _compute_stage_id(self):
+        for applicant in self:
+            if applicant.stage_id == self.env.ref('job_spec.candidate_screen_stage_job'):
+                applicant.candidate_screening_stage = True
+            else:
+                applicant.candidate_screening_stage = False
+            if applicant.stage_id == self.env.ref('job_spec.consultant_interview_stage_job'):
+                applicant.consultant_interview_stage = True
+            else:
+                applicant.consultant_interview_stage = False
+            if applicant.stage_id == self.env.ref('job_spec.reference_check_1_stage_job'):
+                applicant.reference_check_1_stage = True
+            else:
+                applicant.reference_check_1_stage = False
+            if applicant.stage_id == self.env.ref('job_spec.reference_check_2_stage_job'):
+                applicant.reference_check_2_stage = True
+            else:
+                applicant.reference_check_2_stage = False
+            if applicant.stage_id == self.env.ref('job_spec.reference_check_3_stage_job'):
+                applicant.reference_check_3_stage = True
+            else:
+                applicant.reference_check_3_stage = False
+            if applicant.stage_id == self.env.ref('job_spec.cv_submitted_stage_job'):
+                applicant.cv_submitted_stage = True
+            else:
+                applicant.cv_submitted_stage = False
+            if applicant.stage_id == self.env.ref('job_spec.first_client_interview_stage_job'):
+                applicant.first_client_interview_stage = True
+            else:
+                applicant.first_client_interview_stage = False
+            if applicant.stage_id == self.env.ref('job_spec.offer_stage_job'):
+                applicant.offer_stage = True
+            else:
+                applicant.offer_stage = False
+
 
     def create_resume(self):
         for record in self:

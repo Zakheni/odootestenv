@@ -36,7 +36,7 @@
         </record>
 
         <record model="hr.recruitment.stage" id="offer_stage_job">
-            <field name="name">Offer Stage</field>
+            <field name="name">Offer/onboarding stage</field>
             <field name="sequence">8</field>
         </record>
     </data>
